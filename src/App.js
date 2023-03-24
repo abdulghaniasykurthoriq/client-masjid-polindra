@@ -1,8 +1,16 @@
 import React from 'react'
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
+import Login from './pages/login'
+import Materi from './pages/materi'
 
 function App() {
   return (
-    <div className='bg-red-200'>Hello world</div>
+    <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Materi/>}/>
+          <Route path='/login' element={<Login/>}/>
+        </Routes>
+    </BrowserRouter>
   )
 }
 
