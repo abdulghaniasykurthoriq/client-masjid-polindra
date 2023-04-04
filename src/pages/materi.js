@@ -5,7 +5,6 @@ import Navside from '../components/moleculs/navside'
 import LogoutBtn from '../assets/icon_logout.png'
 import ImageMaulid from '../assets/imageMaulid.png'
 import { FaFilter, FaSearch } from 'react-icons/fa'
-import useMediaQuery from '../helpers/mediaQuery'
 
 
 function Materi() {
@@ -32,7 +31,7 @@ function Materi() {
           <Carousel/>
           <MenuMateri/>
           <SearchSort/>
-          <div className='mx-8 flex flex-wrap justify-center'>
+          <div className='mx-8 flex flex-wrap  justify-start '>
               <CardMateri/>
               <CardMateri/>
               <CardMateri/>
@@ -75,7 +74,7 @@ const SearchSort = () => {
         </div>
       </div>
       <div className='flex items-center pl-6'>
-        <p >Sort : </p>
+        <p className='hidden 2xl:flex' >Sort : </p>
         <div className='h-12 bg-blue-100 flex items-center px-4 rounded-xl ml-3'>
           <p>Tanggal Terdekat</p>
         </div>

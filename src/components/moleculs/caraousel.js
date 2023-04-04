@@ -1,12 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CarouselItem from '../atoms/carouselItem'
 
 function Carousel() {
+
+  useEffect(() => {
+    // let i =1 ;
+    // setInterval(() => {
+    //   if(i<3){
+    //     window.location(`#slide${i}`)
+    //     i++;
+    //   }else{
+    //     window.location('#slide1')
+    //   }
+    // },3000)
+  }, [])
+  
   return (
-    <div className="carousel w-full">
+    <div className="carousel w-full bg-gradient-to-r from-violet-500 to-fuchsia-500">
         <CarouselItem
             curent='slide1'
-            prev='#slide2'
+            prev='#slide3'
             next='#slide2'
             title="MAU DIBANGUNKAN RUMAH DI SURGA?"
             body="“Siapa yang membangun masjid karena Allah, maka Allah akan membangun baginya semisal itu di surga”
@@ -15,8 +28,18 @@ function Carousel() {
         <CarouselItem
             curent='slide2'
             prev='#slide1'
+            next='#slide3'
+            title="MAU DIBANGUNKAN RUMAH DI DUNIA?"
+            body="“Siapa yang membangun masjid karena Allah, maka Allah akan membangun baginya semisal itu di surga”
+            (HR. Bukhari)"
+        />
+        <CarouselItem
+            curent='slide3'
+            prev='#slide2'
             next='#slide1'
-            src='https://banner2.cleanpng.com/20180728/ryx/kisspng-hamburger-button-computer-icons-menu-number-list-5b5c089f664156.0146657315327581754189.jpg'
+            title="MAU DIBANGUNKAN RUMAH DI CELENG?"
+            body="“Siapa yang membangun masjid karena Allah, maka Allah akan membangun baginya semisal itu di surga”
+            (HR. Bukhari)"
         />
   {/* <div id="slide2" className="carousel-item relative w-full">
     <img src="/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="w-full" />

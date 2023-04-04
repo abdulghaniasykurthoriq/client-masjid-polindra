@@ -10,12 +10,17 @@ function Navside() {
 //     setIsShow(false)
 //   }
     const [isShow, setIsShow] = useState(false)
-    const isDesktop = useMediaQuery('(min-width:960px)');
+    const isDesktop = useMediaQuery('(min-width:1024px)');
+    const isMobile = useMediaQuery('(min-width:200px)');
     useEffect(() => {
+        if(isMobile){
+            setIsShow(true) 
+        }
         if(isDesktop){
             setIsShow(false)
         }
-    });
+
+    },[isDesktop,isMobile]);
     
     const handleShow = () => {
         setIsShow(!isShow);
@@ -24,7 +29,7 @@ function Navside() {
     <div className='relative '>
         <div onClick={handleShow} className='bg-red-200 w-14 h-14 rounded-full absolute  left-3 top-3'></div>
 
-        <div style={{backgroundColor:'#d2d6fb'}} className={isShow ? 'hidden' : '' +' w-full z-30 fixed lg:relative lg:flex-col  h-screen lg:w-80'}>
+        <div style={{backgroundColor:'#d2d6fb'}} className={`${isShow ? 'hidden' : ''} w-full z-30 fixed lg:relative lg:flex-col  h-screen lg:w-80`}>
         <div onClick={handleShow} className='lg:hidden bg-red-200 w-14 h-14 rounded-full absolute right-10 top-10 z-50'></div>
         
         <div className='flex justify-center pt-8 lg:px-4 pb-16 lg:pb-2'>
