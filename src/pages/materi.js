@@ -33,13 +33,13 @@ function Materi(props) {
 
   return (
     <div className="flex justify-center">
-      <div
+      {/* <div
         style={{ backgroundColor: "#d2d6fb" }}
         className="h-screen w-screen absolute left-[-1400px]"
-      ></div>
+      ></div> */}
       <Container>
         <div className="flex">
-          <Navside />
+          {/* <Navside /> */}
           <div className=" w-full">
             <div className="flex w-full justify-end">
               <div className="w-12 m-4 ">
@@ -81,7 +81,7 @@ const MenuMateri = () => {
       <div className="text-blue-600 border-b-2 border-blue-500 w-max mx-2 p-2">
         Semua Kajian
       </div>
-      <div className="w-max mx-2 p-2">Riwayat Kajian</div>
+      {/* <div className="w-max mx-2 p-2">Riwayat Kajian</div> */}
     </div>
   );
 };
